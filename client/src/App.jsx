@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-export default class App extends React.Component {
+import { baseApiUrl } from './global'
 
-    data = []
+const App = () => {
+    const [backendData, setBackendData] = useState([{}])
 
-    componentDidMount() {
-        axios.get()
+    useEffect(() => {
+        fetch(baseApiUrl)   
             .then(response => response.json())
-            .then(json => console.log(json))
-    }
+            .then(data => setBackendData(data))
+    }, [])
+
+    return (
+        <React.Fragment>
+            <p>Teste</p>
+        </React.Fragment>
+    )
 }
+
+export default App
