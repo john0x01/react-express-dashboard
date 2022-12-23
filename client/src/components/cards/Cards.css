@@ -1,0 +1,25 @@
+.cards {
+    margin: 0;
+}
+
+.cards-left {
+    margin: 0;
+}
+
+.card {
+    margin: 0;
+}
+
+.card-title {
+    width: 280px;
+    height: 40px;
+    background: #FFF;
+    border: 1px solid var(--grey);
+}
+
+.card-body {
+    width: 280px;
+    height: 112px;
+    background: #FFF;
+    border: 1px solid var(--grey);
+}

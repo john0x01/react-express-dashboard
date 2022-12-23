@@ -7,10 +7,10 @@ const App = () => {
     const [backendData, setBackendData] = useState([{}])
 
     useEffect(() => {
-        fetch(baseApiUrl)   
-            .then(response => response.json())
+        axios.get(baseApiUrl)
+            .then(res => res.data)
             .then(data => setBackendData(data))
-    }, [])
+    }, []) 
 
     return (
         <React.Fragment>
