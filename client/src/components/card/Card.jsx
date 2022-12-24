@@ -2,7 +2,6 @@ import React from 'react'
 import './Card.css'
 
 const Cards = props => {
-    console.log(props.percentage[0] == '-')
     return (
         <div className="card">
             <div className="card-title">
