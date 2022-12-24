@@ -1,14 +1,75 @@
 [
-    { "month": "jan-22", "revenue": 3200, "outgoing": 1600, "startingBalance": 1000, "taxes": 0.12 },
-    { "month": "fev-22", "revenue": 3200, "outgoing": 1600,"taxes": 0.12 },
-    { "month": "mar-22", "revenue": 3200, "outgoing": 1600,"taxes": 0.12 },
-    { "month": "apr-22", "revenue": 3200, "outgoing": 1600,"taxes": 0.12 },
-    { "month": "may-22", "revenue": 3200, "outgoing": 1600,"taxes": 0.12 },
-    { "month": "jun-22", "revenue": 3200, "outgoing": 1600,"taxes": 0.12 },
-    { "month": "jul-22", "revenue": 3200, "outgoing": 1600,"taxes": 0.12 },
-    { "month": "aug-22", "revenue": 3200, "outgoing": 1600,"taxes": 0.12 },
-    { "month": "sep-22", "revenue": 3200, "outgoing": 1600,"taxes": 0.12 },
-    { "month": "oct-22", "revenue": 3200, "outgoing": 1600,"taxes": 0.12 },
-    { "month": "nov-22", "revenue": 3200, "outgoing": 1600,"taxes": 0.12 },
-    { "month": "dec-22", "revenue": 3200, "outgoing": 1600,"taxes": 0.12 }
+    { 
+        "month": "jan-22", 
+        "revenue": 3200, 
+        "outgoing": 1600, 
+        "startingBalance": 1000, 
+        "taxes": 0.12 
+    },
+    { 
+        
+        "month": "fev-22", 
+        "revenue": 3200, 
+        "outgoing": 1600,
+        "taxes": 0.12 },
+    { 
+        "month": "mar-22", 
+        "revenue": 3200, 
+        "outgoing": 1600,
+        "taxes": 0.12 
+    },
+    { 
+        "month": "apr-22", 
+        "revenue": 3200, 
+        "outgoing": 1600,
+        "taxes": 0.12 
+    },
+    { 
+        "month": "may-22", 
+        "revenue": 3200, 
+        "outgoing": 1600,
+        "taxes": 0.12
+    },
+    { 
+        "month": "jun-22", 
+        "revenue": 3200, 
+        "outgoing": 1600,
+        "taxes": 0.12
+    },
+    { 
+        "month": "jul-22", 
+        "revenue": 3200, 
+        "outgoing": 1600,
+        "taxes": 0.12
+    },
+    { 
+        "month": "aug-22", 
+        "revenue": 3200, 
+        "outgoing": 1600,
+        "taxes": 0.12 
+    },
+    { 
+        "month": "sep-22", 
+        "revenue": 3200, 
+        "outgoing": 1600,
+        "taxes": 0.12 
+    },
+    { 
+        "month": "oct-22", 
+        "revenue": 3200, 
+        "outgoing": 1600,
+        "taxes": 0.12 
+    },
+    { 
+        "month": "nov-22", 
+        "revenue": 3200, 
+        "outgoing": 1600,
+        "taxes": 0.12 
+    },
+    { 
+        "month": "dec-22", 
+        "revenue": 3200, 
+        "outgoing": 1600,
+        "taxes": 0.12 
+    }
 ]
