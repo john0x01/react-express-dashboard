@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Card from './components/card/Card'
+import './App.css'
+
 
 import { baseApiUrl } from './global'
 
@@ -14,7 +17,12 @@ const App = () => {
 
     return (
         <React.Fragment>
-            <p>Teste</p>
+            <div className="cards">
+                <div className="cards-left">
+                    <Card title="Total Receita" body="4.190" percentage="-15,8%"/>
+                </div>
+            </div>
+            
         </React.Fragment>
     )
 }

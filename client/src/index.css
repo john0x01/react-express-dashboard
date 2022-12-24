@@ -33,7 +33,12 @@
     color: var(--grey);
 }
 
-.text-card-percentage {
+.text-percentage {
+    font-size: 16px;
+    color: var(--green);
+}
+
+.text-percentage-red {
     font-size: 16px;
     color: var(--red);
 }

@@ -1,0 +1,36 @@
+.card {
+    margin: 0;
+    width: 280px; 
+    height: 256px;
+}
+
+.card-title {
+    width: 280px;
+    height: 40px;
+    background: #FFF;
+    border: 1px solid var(--grey);
+}
+
+.card-title > p {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.card-body {
+    width: 280px;
+    height: 112px;
+    background: #FFF;
+    border: 1px solid var(--grey);
+}
+
+.card-body > p {
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.card-body > span {
+    display: flex;
+    justify-content: center;
+}
