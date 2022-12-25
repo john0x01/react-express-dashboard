@@ -73,16 +73,16 @@
     },
     { 
         "month": "nov-22", 
-        "revenue": 3200,
+        "revenue": 3050,
         "soldGoodsCosts": 800,
         "operatingCosts": 800,
         "taxes": 0.12 
     },
     { 
         "month": "dec-22", 
-        "revenue": 3200,
+        "revenue": 3000,
         "soldGoodsCosts": 800,
-        "operatingCosts": 800,
+        "operatingCosts": 900,
         "taxes": 0.12 
     }
 ]

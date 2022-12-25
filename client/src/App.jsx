@@ -16,23 +16,51 @@ const App = () => {
         
     }, []) 
 
-    // Rece um número como 3200 e retorna uma string como "R$3,200.00"
-    const formatter = new Intl.NumberFormat('en-US', {
+    // Recebe um número como 3200 e retorna uma string como "R$3.200,00"
+    const formatter = new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL'
     })
 
-    // Remove o "R$" e troca vírgula e ponto
+    // Remove o "R$"
     const formatDecimals = (num, money=true) => {
         return formatter.format(num)
-            .slice(2)
-            .replace(',','.')
-            .replace('.', ',')
+            .replace('R$', '')
     }
     
+
+
+    // Obter saldo de cada mês
+    const getBalance = (backendData) => {
+        let balancesArray = []
+        for(let i in backendData) {
+            const monthBalance = {
+                month: backendData[i].month,
+                balance: backendData[i].startingBalance ? 
+                    // Se o mês tiver startingBalance (apenas Janeiro), será
+                    // o saldo
+                    backendData[i].startingBalance : ( 
+                        balancesArray[i - 1] ? balancesArray[i - 1].balance +
+                           // Se o saldo do mês anterior estiver setado, somar
+                           // ele com o netProfit do mês atual 
+                            backendData[i].revenue - 
+                            backendData[i].soldGoodsCosts - 
+                            backendData[i].operatingCosts -
+                            (backendData[i].taxes * backendData[i].revenue) :
+                                ''
+    
+                    )
+                
+            }
+            balancesArray.push(monthBalance)
+        }
+        return balancesArray
+    }
+
+
     // Calcular variáveis aqui
     const calculateVariables = (property, customIndex='lastMonth') => {
-        const monthIndex = customIndex != 'lastMonth' ? customIndex : backendData.length - 1
+        const monthIndex = customIndex !== 'lastMonth' ? customIndex : backendData.length - 1
         try {
             return {
                 percentage: (backendData[monthIndex][property] /
@@ -47,13 +75,13 @@ const App = () => {
                 netProfit: backendData[monthIndex].revenue -
                     backendData[monthIndex].soldGoodsCosts - 
                     backendData[monthIndex].operatingCosts -
-                    (backendData[monthIndex].taxes * backendData[monthIndex].revenue)
-
+                    (backendData[monthIndex].taxes * backendData[monthIndex].revenue),
+                balance: getBalance(backendData)[monthIndex].balance
             }
         } catch(e) {}
         
     }
-
+    console.log(formatDecimals(-1.9))
     return (
         <React.Fragment>
             <div className="cards">
@@ -69,19 +97,25 @@ const App = () => {
                         title="Total Despesas" 
                         body={formatDecimals(calculateVariables() ? calculateVariables().outgoing : '')} 
                         percentage={calculateVariables() ? formatDecimals(
-                            (calculateVariables().outgoing / calculateVariables(backendData.length - 2).outgoing
+                            (calculateVariables().outgoing / calculateVariables(undefined, backendData.length - 2).outgoing
                             - 1) * 100
                         ) : ''}
                             />
                     <Card 
                         title="Lucro Líquido" 
                         body={formatDecimals(calculateVariables() ? calculateVariables().netProfit : '')} 
-                        percentage="-41,7"
+                        percentage={calculateVariables() ? formatDecimals(
+                            (calculateVariables().netProfit / calculateVariables(undefined, backendData.length - 2).netProfit
+                            - 1) * 100
+                        ) : ''}
                     />
                     <Card 
                         title="Saldo no final do mês" 
-                        body="5.712,00" 
-                        percentage="-4,8" 
+                        body={formatDecimals(calculateVariables() ? calculateVariables().balance : '')}
+                        percentage={calculateVariables() ? formatDecimals(
+                            (calculateVariables().balance / calculateVariables(undefined, backendData.length -2).balance
+                            - 1) * 100
+                        ) : ''}
                     />
                 </div>
             </div>
