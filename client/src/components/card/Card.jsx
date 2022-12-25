@@ -12,7 +12,7 @@ const Cards = props => {
                 <span
                     className={`text-percentage${props.percentage[0] == '-' ? '-red' : ''}`}
                 >
-                    {Number(props.percentage) > 0 ? "+" : ''}{props.percentage}%
+                    {props.percentage}%
                 </span>
                 <span className='text-card-compare'>vs. mês anterior</span>
             </div>

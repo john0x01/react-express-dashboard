@@ -14,7 +14,6 @@
 }
 
 .card-title > p {
-    display: block;
     display: flex;
     justify-content: center;
 }

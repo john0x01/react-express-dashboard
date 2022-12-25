@@ -85,39 +85,37 @@ const App = () => {
     return (
         <React.Fragment>
             <div className="cards">
-                <div className="cards-left">
-                    <Card 
-                        title="Total Receita" 
-                        body={formatDecimals(backendData[backendData.length - 1].revenue)} 
-                        percentage={formatDecimals(
-                            calculateVariables('revenue') ? 
-                                calculateVariables('revenue').percentage : '')}
-                            />
-                    <Card 
-                        title="Total Despesas" 
-                        body={formatDecimals(calculateVariables() ? calculateVariables().outgoing : '')} 
-                        percentage={calculateVariables() ? formatDecimals(
-                            (calculateVariables().outgoing / calculateVariables(undefined, backendData.length - 2).outgoing
-                            - 1) * 100
-                        ) : ''}
-                            />
-                    <Card 
-                        title="Lucro Líquido" 
-                        body={formatDecimals(calculateVariables() ? calculateVariables().netProfit : '')} 
-                        percentage={calculateVariables() ? formatDecimals(
-                            (calculateVariables().netProfit / calculateVariables(undefined, backendData.length - 2).netProfit
-                            - 1) * 100
-                        ) : ''}
-                    />
-                    <Card 
-                        title="Saldo no final do mês" 
-                        body={formatDecimals(calculateVariables() ? calculateVariables().balance : '')}
-                        percentage={calculateVariables() ? formatDecimals(
-                            (calculateVariables().balance / calculateVariables(undefined, backendData.length -2).balance
-                            - 1) * 100
-                        ) : ''}
-                    />
-                </div>
+                <Card 
+                    title="Total Receita" 
+                    body={formatDecimals(backendData[backendData.length - 1].revenue)} 
+                    percentage={formatDecimals(
+                        calculateVariables('revenue') ? 
+                            calculateVariables('revenue').percentage : '')}
+                        />
+                <Card 
+                    title="Total Despesas" 
+                    body={formatDecimals(calculateVariables() ? calculateVariables().outgoing : '')} 
+                    percentage={calculateVariables() ? formatDecimals(
+                        (calculateVariables().outgoing / calculateVariables(undefined, backendData.length - 2).outgoing
+                        - 1) * 100
+                    ) : ''}
+                        />
+                <Card 
+                    title="Lucro Líquido" 
+                    body={formatDecimals(calculateVariables() ? calculateVariables().netProfit : '')} 
+                    percentage={calculateVariables() ? formatDecimals(
+                        (calculateVariables().netProfit / calculateVariables(undefined, backendData.length - 2).netProfit
+                        - 1) * 100
+                    ) : ''}
+                />
+                <Card 
+                    title="Saldo no final do mês" 
+                    body={formatDecimals(calculateVariables() ? calculateVariables().balance : '')}
+                    percentage={calculateVariables() ? formatDecimals(
+                        (calculateVariables().balance / calculateVariables(undefined, backendData.length -2).balance
+                        - 1) * 100
+                    ) : ''}
+                />
             </div>
             
         </React.Fragment>
