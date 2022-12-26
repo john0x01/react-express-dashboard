@@ -10,7 +10,7 @@ const Chart = props => {
                 <p className="text-simple">{props.title}</p>
             </div>
             <div className="chart-body">
-                <BarChart data={props.chart} />
+                {props.chart === 'bar' ? <BarChart revenue={props.revenue} outgoing={props.outgoing} /> : ''}
             </div>
             {props.footer ? 
                 <div className="chart-footer">

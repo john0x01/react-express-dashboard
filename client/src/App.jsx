@@ -123,6 +123,9 @@ const App = () => {
                 <Chart 
                     title="Receitas e Despesas"
                     footer='5'
+                    chart="bar"
+                    revenue={backendData.map(month => month.revenue)}
+                    outgoing={backendData.map(month => (month.soldGoodsCosts + month.operatingCosts) * -1)}
                 />
                 <Chart
                     title="Saldo no final do mês"
