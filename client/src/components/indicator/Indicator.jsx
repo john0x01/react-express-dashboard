@@ -13,3 +13,5 @@ const Indicator = props => {
         </div>
     )
 }
+
+export default Indicator

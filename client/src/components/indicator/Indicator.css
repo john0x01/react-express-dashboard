@@ -1,0 +1,12 @@
+.indicator {
+    width: 212px;
+    height: 256px;
+    background: #FFF;
+}
+
+.indicator-title {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}

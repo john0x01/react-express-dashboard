@@ -20,3 +20,10 @@ body {
     justify-content: center;
     gap: 24px;
 }
+
+.indicators {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}

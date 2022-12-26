@@ -3,6 +3,7 @@ import axios from 'axios'
 import Card from './components/card/Card'
 import Chart from './components/chart/Chart'
 import Balance from './components/balance/Balance'
+import Indicator from './components/indicator/Indicator'
 import './App.css'
 
 
@@ -160,6 +161,14 @@ const App = () => {
                     taxes={formatDecimals(backendData[backendData.length - 1].taxes * backendData[backendData.length - 1].revenue)}
                     netProfit={formatDecimals(calculateVariables() ? calculateVariables().netProfit : '')}
                 />
+                <div className="indicators">
+                    <Indicator 
+                        title="% Margem de Lucro Líquido"
+                    />
+                    <Indicator 
+                        title="Índice de Liquidez"
+                    />
+                </div>
             </div>
 
             
