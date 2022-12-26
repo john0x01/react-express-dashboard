@@ -1,10 +1,10 @@
 [
     { 
         "month": "jan-22", 
-        "revenue": 3200,
-        "soldGoodsCosts": 800,
-        "operatingCosts": 800, 
-        "startingBalance": 1000, 
+        "revenue": 900,
+        "soldGoodsCosts": 700,
+        "operatingCosts": 1100, 
+        "startingBalance": 4000, 
         "taxes": 0.12 
     },
     { 
@@ -17,72 +17,72 @@
     },
     { 
         "month": "mar-22", 
-        "revenue": 3200,
-        "soldGoodsCosts": 800,
-        "operatingCosts": 800,
+        "revenue": 4020,
+        "soldGoodsCosts": 1230,
+        "operatingCosts": 2030,
         "taxes": 0.12 
     },
     { 
         "month": "apr-22", 
-        "revenue": 3200,
-        "soldGoodsCosts": 800,
-        "operatingCosts": 800,
+        "revenue": 4550,
+        "soldGoodsCosts": 1440,
+        "operatingCosts": 960,
         "taxes": 0.12 
     },
     { 
         "month": "may-22", 
-        "revenue": 3200,
-        "soldGoodsCosts": 800,
-        "operatingCosts": 800,
+        "revenue": 5010,
+        "soldGoodsCosts": 1660,
+        "operatingCosts": 2080,
         "taxes": 0.12
     },
     { 
         "month": "jun-22", 
-        "revenue": 3200,
-        "soldGoodsCosts": 800,
-        "operatingCosts": 800,
+        "revenue": 5840,
+        "soldGoodsCosts": 1880,
+        "operatingCosts": 2440,
         "taxes": 0.12
     },
     { 
         "month": "jul-22", 
-        "revenue": 3200,
-        "soldGoodsCosts": 800,
-        "operatingCosts": 800,
+        "revenue": 5485,
+        "soldGoodsCosts": 2040,
+        "operatingCosts": 2580,
         "taxes": 0.12
     },
     { 
         "month": "aug-22", 
-        "revenue": 3200,
-        "soldGoodsCosts": 800,
-        "operatingCosts": 800,
+        "revenue": 4809,
+        "soldGoodsCosts": 1670,
+        "operatingCosts": 2890,
         "taxes": 0.12 
     },
     { 
         "month": "sep-22", 
         "revenue": 3200,
-        "soldGoodsCosts": 800,
-        "operatingCosts": 800,
+        "soldGoodsCosts": 1600,
+        "operatingCosts": 2000,
         "taxes": 0.12 
     },
     { 
         "month": "oct-22", 
-        "revenue": 3200,
-        "soldGoodsCosts": 800,
-        "operatingCosts": 800,
+        "revenue": 3450,
+        "soldGoodsCosts": 1650,
+        "operatingCosts": 1980,
         "taxes": 0.12 
     },
     { 
         "month": "nov-22", 
-        "revenue": 3050,
-        "soldGoodsCosts": 800,
-        "operatingCosts": 800,
+        "revenue": 4030,
+        "soldGoodsCosts": 1687,
+        "operatingCosts": 1891,
         "taxes": 0.12 
     },
     { 
         "month": "dec-22", 
-        "revenue": 3000,
-        "soldGoodsCosts": 800,
-        "operatingCosts": 900,
+        "revenue": 4190,
+        "soldGoodsCosts": 1417,
+        "operatingCosts": 1961,
         "taxes": 0.12 
     }
 ]

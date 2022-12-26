@@ -21,14 +21,14 @@ const Balance = props => {
                     <p className="text-simple">Lucro Líquido</p>
                 </div>
                 <div className="num-col">
-                    <p className="text-simple">4190</p>
-                    <p className="text-simple">1417</p>
+                    <p className="text-simple">{props.revenue}</p>
+                    <p className="text-simple">{props.soldGoodsCosts}</p>
                     <hr />
-                    <p className="text-simple"><strong>2773</strong></p>
-                    <p className="text-simple">1961</p>
-                    <p className="text-simple">812</p>
-                    <p className="text-simple">520</p>
-                    <p className="text-simple">5012</p>
+                    <p className="text-simple"><strong>{props.grossProfit}</strong></p>
+                    <p className="text-simple">{props.operatingCosts}</p>
+                    <p className="text-simple">{props.operatingProfit}</p>
+                    <p className="text-simple">{props.taxes}</p>
+                    <p className="text-simple">{props.netProfit}</p>
                 </div>
                 <div className="num-col">
                     <p className="text-simple">100%</p>

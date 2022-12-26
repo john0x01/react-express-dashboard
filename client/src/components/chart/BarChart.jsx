@@ -19,7 +19,6 @@ export default class BarChart extends React.Component {
                 /> */}
                 <VictoryAxis 
                     dependentAxis
-                    tickFormat={(x) => x}
                     />
                 <VictoryStack
                     colorScale={["#07A485", "#FF3F3B"]}>

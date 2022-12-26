@@ -2,6 +2,7 @@ import React from 'react'
 import './Chart.css'
 
 import BarChart from './BarChart'
+import LineChart from './LineChart'
 
 const Chart = props => {
     return (
@@ -10,12 +11,10 @@ const Chart = props => {
                 <p className="text-simple">{props.title}</p>
             </div>
             <div className="chart-body">
-                {props.chart === 'bar' ? <BarChart revenue={props.revenue} outgoing={props.outgoing} /> : ''}
+                {props.chart === 'bar' ? 
+            <BarChart revenue={props.revenue} outgoing={props.outgoing} /> : 
+            <LineChart balance={props.balance} />}
             </div>
-            {props.footer ? 
-                <div className="chart-footer">
-                </div>
-            : '' }
         </div>
     )
 }

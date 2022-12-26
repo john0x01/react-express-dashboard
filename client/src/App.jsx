@@ -33,11 +33,20 @@ const App = () => {
 
 
     // Obter saldo de cada mês
-    const getBalance = (backendData) => {
+    const getChartsArrays = (backendData) => {
         let balancesArray = []
+        let revenuesArray = []
+        let outgoingArray = []
         for(let i in backendData) {
+            const monthRevenue = {
+                revenue: backendData[i].revenue
+            }
+            revenuesArray.push(monthRevenue)
+            const monthOutgoing = {
+                outgoing: (backendData[i].soldGoodsCosts + backendData[i].operatingCosts) * (-1)
+            }
+            outgoingArray.push(monthOutgoing)
             const monthBalance = {
-                month: backendData[i].month,
                 balance: backendData[i].startingBalance ? 
                     // Se o mês tiver startingBalance (apenas Janeiro), será
                     // o saldo
@@ -56,7 +65,11 @@ const App = () => {
             }
             balancesArray.push(monthBalance)
         }
-        return balancesArray
+        return {
+            revenuesArray: revenuesArray,
+            outgoingArray: outgoingArray,
+            balancesArray: balancesArray
+        }
     }
 
 
@@ -78,12 +91,12 @@ const App = () => {
                     backendData[monthIndex].soldGoodsCosts - 
                     backendData[monthIndex].operatingCosts -
                     (backendData[monthIndex].taxes * backendData[monthIndex].revenue),
-                balance: getBalance(backendData)[monthIndex].balance
+                balance: getChartsArrays(backendData).balancesArray[monthIndex].balance
             }
         } catch(e) {}
         
     }
-    console.log(formatDecimals(-1.9))
+
     return (
         <React.Fragment>
             <div className="cards">
@@ -106,7 +119,7 @@ const App = () => {
                     title="Lucro Líquido" 
                     body={formatDecimals(calculateVariables() ? calculateVariables().netProfit : '')} 
                     percentage={calculateVariables() ? formatDecimals(
-                        (calculateVariables().netProfit / calculateVariables(undefined, backendData.length - 2).netProfit
+                        (Math.abs(calculateVariables().netProfit / calculateVariables(undefined, backendData.length - 2).netProfit)
                         - 1) * 100
                     ) : ''}
                 />
@@ -114,7 +127,7 @@ const App = () => {
                     title="Saldo no final do mês" 
                     body={formatDecimals(calculateVariables() ? calculateVariables().balance : '')}
                     percentage={calculateVariables() ? formatDecimals(
-                        (calculateVariables().balance / calculateVariables(undefined, backendData.length -2).balance
+                        (Math.abs(calculateVariables().balance / calculateVariables(undefined, backendData.length -2).balance)
                         - 1) * 100
                     ) : ''}
                 />
@@ -122,18 +135,31 @@ const App = () => {
             <div className="charts">
                 <Chart 
                     title="Receitas e Despesas"
-                    footer='5'
                     chart="bar"
-                    revenue={backendData.map(month => month.revenue)}
-                    outgoing={backendData.map(month => (month.soldGoodsCosts + month.operatingCosts) * -1)}
+                    revenue={getChartsArrays(backendData)['revenuesArray'] ? 
+                        getChartsArrays(backendData)['revenuesArray'] : ''}
+                    outgoing={getChartsArrays(backendData)['outgoingArray'] ? 
+                        getChartsArrays(backendData)['outgoingArray'] : ''}
                 />
                 <Chart
                     title="Saldo no final do mês"
+                    chart="line"
+                    balance={getChartsArrays(backendData)['balancesArray'] ? 
+                        getChartsArrays(backendData)['balancesArray'] : ''}
                 />
             </div>
             <div className="bottom-cards">
                 <Balance 
-                    title="Demonstração de resultados"/>
+                    title="Demonstração de resultados"
+                    revenue={formatDecimals(backendData[backendData.length - 1].revenue)}
+                    soldGoodsCosts={formatDecimals(backendData[backendData.length - 1].soldGoodsCosts)}
+                    outgoing={formatDecimals(calculateVariables() ? calculateVariables().outgoing : '')}
+                    grossProfit={formatDecimals(calculateVariables() ? calculateVariables().grossProfit : '')}
+                    operatingCosts={formatDecimals(backendData[backendData.length - 1].operatingCosts)}
+                    operatingProfit={formatDecimals(calculateVariables() ? calculateVariables().operatingProfit : '')}
+                    taxes={formatDecimals(backendData[backendData.length - 1].taxes * backendData[backendData.length - 1].revenue)}
+                    netProfit={formatDecimals(calculateVariables() ? calculateVariables().netProfit : '')}
+                />
             </div>
 
             
