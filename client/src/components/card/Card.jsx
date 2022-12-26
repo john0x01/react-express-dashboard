@@ -10,7 +10,7 @@ const Card = props => {
             <div className="card-body">
                 <p className='text-hero'>{props.body}</p>
                 <span
-                    className={`text-percentage${props.percentage[0] == '-' ? '-red' : ''}`}
+                    className={`text-percentage${props.percentage[0] === '-' ? '-red' : ''}`}
                 >
                     {props.percentage}%
                 </span>
