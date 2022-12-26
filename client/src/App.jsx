@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Card from './components/card/Card'
+import Chart from './components/chart/Chart'
+import Balance from './components/balance/Balance'
 import './App.css'
 
 
@@ -117,6 +119,20 @@ const App = () => {
                     ) : ''}
                 />
             </div>
+            <div className="charts">
+                <Chart 
+                    title="Receitas e Despesas"
+                    footer='5'
+                />
+                <Chart
+                    title="Saldo no final do mês"
+                />
+            </div>
+            <div className="bottom-cards">
+                <Balance 
+                    title="Demonstração de resultados"/>
+            </div>
+
             
         </React.Fragment>
     )

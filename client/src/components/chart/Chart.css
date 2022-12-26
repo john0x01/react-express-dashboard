@@ -1,0 +1,27 @@
+.chart {
+    display: grid;
+    margin: 0;
+    width: 450px;
+    height: 232px;
+    gap: 4px;
+}
+
+.chart-title {
+    width: 450px;
+    height: 32px;
+    background: #FFF;
+    border: 1px solid var(--grey);
+}
+
+.chart-title > p {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.chart-body {
+    width: 450px;
+    height: 194px;
+    background: #FFF;
+    border: 1px solid var(--grey);
+}

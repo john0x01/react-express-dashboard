@@ -1,14 +1,13 @@
 .card {
     display: grid;
-    margin: 0;
-    width: 280px; 
-    height: 156px;
+    width: 212px; 
+    height: 122px;
     gap: 4px;
 }
 
 .card-title {
-    width: 280px;
-    height: 40px;
+    width: 212px;
+    height: 32px;
     background: #FFF;
     border: 1px solid var(--grey);
 }
@@ -19,8 +18,8 @@
 }
 
 .card-body {
-    width: 280px;
-    height: 112px;
+    width: 212px;
+    height: 86px;
     background: #FFF;
     border: 1px solid var(--grey);
 }

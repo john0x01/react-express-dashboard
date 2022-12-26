@@ -1,14 +1,14 @@
 import React from 'react'
 import './Card.css'
 
-const Cards = props => {
+const Card = props => {
     return (
         <div className="card">
             <div className="card-title">
                 <p className='text-simple'>{props.title}</p>
             </div>
             <div className="card-body">
-                <p className='text-card-hero'>{props.body}</p>
+                <p className='text-hero'>{props.body}</p>
                 <span
                     className={`text-percentage${props.percentage[0] == '-' ? '-red' : ''}`}
                 >
@@ -20,4 +20,4 @@ const Cards = props => {
     )
 }
 
-export default Cards
+export default Card

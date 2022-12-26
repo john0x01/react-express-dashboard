@@ -17,29 +17,33 @@
     font-family: "Open Sans", sans-serif;
 }
 
+#root {
+    display: grid;
+    gap: 8px;
+}
 
 .text-simple {
-    font-size: 16px;
+    font-size: 12px;
     color: var(--text-grey);
 }
 
-.text-card-hero {
-    font-size: 40px;
+.text-hero {
+    font-size: 32px;
     color: var(--text-grey);
 }
 
 .text-card-compare {
-    font-size: 16px;
+    font-size: 12px;
     color: var(--grey);
 }
 
 .text-percentage {
-    font-size: 16px;
+    font-size: 12px;
     color: var(--green);
 }
 
 .text-percentage-red {
-    font-size: 16px;
+    font-size: 12px;
     color: var(--red);
 }
 .font-bold {
