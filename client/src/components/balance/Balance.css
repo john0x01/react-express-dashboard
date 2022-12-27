@@ -5,24 +5,22 @@
     background: #FFF;
 }
 
-.balance.title {
+.balance-title {
     margin: 0;
+    height: 28px;
+    line-height: 1.5em;
 }
 .balance-title > p {
     display: flex;
     justify-content: center;
 }
 
-.balance-title > hr {
-    color: rgba(128, 128, 128, 0.1);
-    width: 50%;
-    margin-left: 25%;
-}
 
 .balance-body {
     display: grid;
     grid-template-columns: 6fr 1fr 1fr;
     margin: 16px;
+    line-height: 1.5em;
 }
 
 .balance-body .num-col {

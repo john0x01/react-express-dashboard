@@ -1,5 +1,6 @@
 import React from 'react'
 import NetProfitIndicator from './NetProfitIndicator'
+import CurrentRatio from './CurrentRatio'
 import './Indicator.css'
 
 const Indicator = props => {
@@ -11,7 +12,8 @@ const Indicator = props => {
             </div>
             <div className="indicator-body">
                 {props.chart === 'pie' ? 
-                    <NetProfitIndicator data={props.data} text={props.text}/> : ''}
+                    <NetProfitIndicator data={props.data} text={props.text}/> :
+                    <CurrentRatio data={props.data} text={props.text} />}
                 
             </div>
         </div>

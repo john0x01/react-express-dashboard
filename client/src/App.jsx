@@ -152,14 +152,15 @@ const App = () => {
             <div className="bottom-cards">
                 <Balance 
                     title="Demonstração de resultados"
-                    revenue={formatDecimals(backendData[backendData.length - 1].revenue)}
-                    soldGoodsCosts={formatDecimals(backendData[backendData.length - 1].soldGoodsCosts)}
-                    outgoing={formatDecimals(calculateVariables() ? calculateVariables().outgoing : '')}
-                    grossProfit={formatDecimals(calculateVariables() ? calculateVariables().grossProfit : '')}
-                    operatingCosts={formatDecimals(backendData[backendData.length - 1].operatingCosts)}
-                    operatingProfit={formatDecimals(calculateVariables() ? calculateVariables().operatingProfit : '')}
-                    taxes={formatDecimals(backendData[backendData.length - 1].taxes * backendData[backendData.length - 1].revenue)}
-                    netProfit={formatDecimals(calculateVariables() ? calculateVariables().netProfit : '')}
+                    format={formatDecimals}
+                    revenue={backendData[backendData.length - 1].revenue}
+                    soldGoodsCosts={backendData[backendData.length - 1].soldGoodsCosts}
+                    outgoing={calculateVariables() ? calculateVariables().outgoing : ''}
+                    grossProfit={calculateVariables() ? calculateVariables().grossProfit : ''}
+                    operatingCosts={backendData[backendData.length - 1].operatingCosts}
+                    operatingProfit={calculateVariables() ? calculateVariables().operatingProfit : ''}
+                    taxes={backendData[backendData.length - 1].taxes * backendData[backendData.length - 1].revenue}
+                    netProfit={calculateVariables() ? calculateVariables().netProfit : ''}
                 />
                 <div className="indicators">
                     <Indicator 
@@ -173,6 +174,10 @@ const App = () => {
                     />
                     <Indicator 
                         title="Índice de Liquidez"
+                        data={[
+                            { x: 1, y: 2}, 
+                            { x: 2, y: 3}
+                        ]}
                     />
                 </div>
             </div>

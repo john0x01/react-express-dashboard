@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { 
-    VictoryChart, VictoryBar, VictoryAxis, VictoryStack
+    VictoryChart, VictoryBar, VictoryAxis, VictoryStack, VictoryLabel
 } from 'victory'
 
 
@@ -28,16 +28,19 @@ export default class BarChart extends React.Component {
                         y="revenue"
                         alignment='start'
                         barWidth={24}
-                        // animate={{
-                        //     duration: 2000,
-                        //     onLoad: { duration: 1000 }
-                        //   }}
+                        
                     />
                     <VictoryBar
                         data={this.props.outgoing}
                         y="outgoing"
                         alignment='start'
                         barWidth={24}
+                    />
+                    <VictoryLabel
+                        textAnchor="middle"
+                        style={{ fontSize: 20, fill: "#5e5eD5e" }}
+                        x={240} y={250}
+                        text={"JAN FEV MAR ABR MAI JUN JUL AGO SET OUT NOV DEZ"}
                     />
                 </VictoryStack>
 
