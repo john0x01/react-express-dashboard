@@ -7,6 +7,7 @@ import {
 
 export default class BarChart extends React.Component {
     render() {
+        
         return (
             <VictoryChart
                 
@@ -27,20 +28,16 @@ export default class BarChart extends React.Component {
                         y="revenue"
                         alignment='start'
                         barWidth={24}
-                        animate={{
-                            duration: 2000,
-                            onLoad: { duration: 1000 }
-                          }}
+                        // animate={{
+                        //     duration: 2000,
+                        //     onLoad: { duration: 1000 }
+                        //   }}
                     />
                     <VictoryBar
                         data={this.props.outgoing}
                         y="outgoing"
                         alignment='start'
                         barWidth={24}
-                        animate={{
-                            duration: 2000,
-                            onLoad: { duration: 1000 }
-                          }}
                     />
                 </VictoryStack>
 

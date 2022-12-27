@@ -1,13 +1,17 @@
 import React from 'react'
+import NetProfitIndicator from './NetProfitIndicator'
 import './Indicator.css'
 
 const Indicator = props => {
+    // console.log(`Revenue: ${props.revenue}`)
     return (
         <div className="indicator">
             <div className="indicator-title">
                 <p className="text-timple">{props.title}</p>
             </div>
             <div className="indicator-body">
+                {props.chart === 'pie' ? 
+                    <NetProfitIndicator data={props.data} text={props.text}/> : ''}
                 
             </div>
         </div>

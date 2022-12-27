@@ -164,6 +164,12 @@ const App = () => {
                 <div className="indicators">
                     <Indicator 
                         title="% Margem de Lucro Líquido"
+                        data={[
+                            { x: 1, y: calculateVariables() ? calculateVariables().netProfit : ''}, 
+                            { x: 2, y: backendData[1] ? backendData[backendData.length - 1].revenue : ''}
+                        ]}
+                        text={calculateVariables() ? calculateVariables().netProfit / backendData[backendData.length - 1].revenue * 100 : ''}
+                        chart="pie"
                     />
                     <Indicator 
                         title="Índice de Liquidez"
