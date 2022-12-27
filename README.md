@@ -24,11 +24,12 @@ chmod +x start.sh
 ./start.sh
 ```
 
-## How does it works?
+## Como funciona / How does it works?
 
 ### Requesting data
 
-Once the application is running, the component `App.jsx` will make an axios request to the server and store the received data.
+Uma vez que a aplicação está rodando, o componente `App.jsx` fará um GET via axios ao servidor e armazenará o conteúdo recebido
+Once the application is running, the component `App.jsx` will make a GET request via axios to the server and store the received data.
 
 ```
 const [backendData, setBackendData] = useState([{}])
@@ -41,11 +42,13 @@ useEffect(() => {
 }, []) 
 ```
 
-### Submiting data
+### Enviando Dados / Submiting data
 
+Para enviar dados ao sistema, é necessário editar o arquivo `db.json` localizado em `server/db.json`.
 In order to submit data into the system, you'll have to edit `db.json` file located on `server/db.json`.
 
-The JSON file in an array with months represented by objects that go like this:
+O arquivo JSON contém um array com os meses representados por objetos dessa forma:
+The JSON file is an array with months represented by objects that go like this:
 
 ```
 { 
@@ -58,18 +61,14 @@ The JSON file in an array with months represented by objects that go like this:
     "taxes": 0.12 
 },
 ```
-The other variables displayed on the dashboard are calculated from these in the database
+As outras variáveis mostradas no dashboard são calculadas a partir dessas no banco de dados.
+The other variables displayed on the dashboard are calculated from these in the database.
 
-### Calculating Variables
+### Calculando Variáveis / Calculating Variables
 
+Existem duas funções no **Componente App** que usam a constante `backendData` para calcular outras variáveis:
 There are two functions on the **App Component** that use `backendData` to calculate the other variables:
   1. `getChartsArrays` which returns an object containing separated arrays for every month revenue, outgoing and balance
-  2. `calculateVariables` which also returns an object containg specific variables of the defined month (if not defined, will be the latest).
-  These are: 
-    1. Percentage
-    2. Outgoing
-    3. Gross Profit
-    4. Operating Profit
-    5. Net Profit
+  2. `calculateVariables` which also returns an object containg specific variables of the defined month (if not defined, will be the latest). These are **percentage**, **outgoing** (Total Despesas), **grossProfit** (Lucro Bruto), **
 
 The 1st function is used for the charts and the 2nd for the displayed cards.
