@@ -28,8 +28,7 @@ chmod +x start.sh
 
 ### Requesting data
 
-Uma vez que a aplicação está rodando, o componente `App.jsx` fará um GET via axios ao servidor e armazenará o conteúdo recebido.
-
+Uma vez que a aplicação está rodando, o componente `App.jsx` fará um GET via axios ao servidor e armazenará o conteúdo recebido. <br>
 Once the application is running, the component `App.jsx` will make a GET request via axios to the server and store the received data.
 
 ```
@@ -70,7 +69,7 @@ The other variables displayed on the dashboard are calculated from these in the 
 Existem duas funções no **Componente App** que usam a constante `backendData` para calcular outras variáveis: <br>
 There are two functions on the **App Component** that use `backendData` to calculate the other variables:
   1. `getChartsArrays` which returns an object containing separated arrays for every month revenue, outgoing and balance
-  2. `calculateVariables` which also returns an object containg specific variables of the defined month (if not defined, will be the latest). These are **percentage**, **outgoing** (Total Despesas), **grossProfit** (Lucro Bruto), **
+  2. `calculateVariables` which also returns an object containg specific variables of the defined month (if not defined, will be the latest). These are **percentage**, **outgoing** (Total Despesas), **grossProfit** (Lucro Bruto), **operatingProfit** (Lucro Operacional), **netProfit** (Lucro Líquido), **balance** (Saldo)
 
 A primeira função é usada para os gráficos e a segunda para os cards. <br>
 The 1st function is used for the charts and the 2nd for the displayed cards.
