@@ -16,7 +16,10 @@
 ## Usage
 
 ```
-cd server/ | npm run server & cd client/ | npm start
+cd server/ 
+npm start
+cd ../client
+npm start
 ```
 or
 ```
