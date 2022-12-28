@@ -18,7 +18,9 @@
 ```
 ~$ cd server/ 
 ~$ npm start
-~$ cd ../client
+```
+```
+~$ cd client/
 ~$ npm start
 ```
 or
