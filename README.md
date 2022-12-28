@@ -45,12 +45,10 @@ useEffect(() => {
 
 ### Enviando Dados / Submiting data
 
-Para enviar dados ao sistema, é necessário editar o arquivo `db.json` localizado em `server/db.json`.
-
+Para enviar dados ao sistema, é necessário editar o arquivo `db.json` localizado em `server/db.json`. <br>
 In order to submit data into the system, you'll have to edit `db.json` file located on `server/db.json`.
 
-O arquivo JSON contém um array com os meses representados por objetos dessa forma:
-
+O arquivo JSON contém um array com os meses representados por objetos dessa forma: <br>
 The JSON file is an array with months represented by objects that go like this:
 
 ```
@@ -64,18 +62,15 @@ The JSON file is an array with months represented by objects that go like this:
     "taxes": 0.12 
 },
 ```
-As outras variáveis mostradas no dashboard são calculadas a partir dessas no banco de dados.
-
+As outras variáveis mostradas no dashboard são calculadas a partir dessas no banco de dados. <br>
 The other variables displayed on the dashboard are calculated from these in the database.
 
 ### Calculando Variáveis / Calculating Variables
 
-Existem duas funções no **Componente App** que usam a constante `backendData` para calcular outras variáveis:
-
+Existem duas funções no **Componente App** que usam a constante `backendData` para calcular outras variáveis: <br>
 There are two functions on the **App Component** that use `backendData` to calculate the other variables:
   1. `getChartsArrays` which returns an object containing separated arrays for every month revenue, outgoing and balance
   2. `calculateVariables` which also returns an object containg specific variables of the defined month (if not defined, will be the latest). These are **percentage**, **outgoing** (Total Despesas), **grossProfit** (Lucro Bruto), **
 
-A primeira função é usada para os gráficos e a segunda para os cards.
-
+A primeira função é usada para os gráficos e a segunda para os cards. <br>
 The 1st function is used for the charts and the 2nd for the displayed cards.
