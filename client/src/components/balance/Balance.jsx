@@ -9,7 +9,6 @@ const Balance = props => {
                 .replace('00', '')
         )
     }
-    console.log(props.format)
     return (
         <div className="balance">
             <div className="balance-title">

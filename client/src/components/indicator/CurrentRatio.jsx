@@ -14,19 +14,23 @@ export default class CurrentRatio extends React.Component {
                     data={this.props.data}
                     innerRadius={68} labelRadius={100}
                     style={{ labels: { fontSize: 20, fill: "white"} }}
-                    colorScale={["#d9d9d9", "#07A485"]}
+                    colorScale={["#d9d9d9", this.props.index >= 3 ? "#07A485" : "#FF3F3B" ]}
                 />
                 <VictoryLabel
                     textAnchor="middle"
-                    style={{ fontSize: 32, fill: "#07a485" }}
+                    style={
+                        { fontSize: 32, fill: this.props.index >= 3 ? "#07A485" : "#FF3F3B" }
+                    }
                     x={106} y={96}
-                    text={"3,4"}
+                    text={
+                        this.props.index ? this.props.index.toFixed(1).replace('.', ',') : ''
+                    }
                 />
                 <VictoryLabel
                     textAnchor="middle"
                     style={{ fontSize: 20, fill: "#5e5e5e" }}
                     x={106} y={120}
-                    text={"Ótimo"}
+                    text={this.props.text}
                 />
                 <VictoryLabel
                     textAnchor="middle"

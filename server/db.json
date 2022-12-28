@@ -5,6 +5,8 @@
         "soldGoodsCosts": 700,
         "operatingCosts": 1100, 
         "startingBalance": 4000, 
+        "currentAssets": 4500,
+        "currentLiabilities": 1800,
         "taxes": 0.12 
     },
     { 
@@ -13,6 +15,8 @@
         "revenue": 3200,
         "soldGoodsCosts": 800,
         "operatingCosts": 800,
+        "currentAssets": 5700,
+        "currentLiabilities": 1600,
         "taxes": 0.12 
     },
     { 
@@ -20,6 +24,8 @@
         "revenue": 4020,
         "soldGoodsCosts": 1230,
         "operatingCosts": 2030,
+        "currentAssets": 5900,
+        "currentLiabilities": 2060,
         "taxes": 0.12 
     },
     { 
@@ -27,6 +33,8 @@
         "revenue": 4550,
         "soldGoodsCosts": 1440,
         "operatingCosts": 960,
+        "currentAssets": 7250,
+        "currentLiabilities": 2380,
         "taxes": 0.12 
     },
     { 
@@ -34,6 +42,8 @@
         "revenue": 5010,
         "soldGoodsCosts": 1660,
         "operatingCosts": 2080,
+        "currentAssets": 8590,
+        "currentLiabilities": 2880,
         "taxes": 0.12
     },
     { 
@@ -41,6 +51,8 @@
         "revenue": 5840,
         "soldGoodsCosts": 1880,
         "operatingCosts": 2440,
+        "currentAssets": 9520,
+        "currentLiabilities": 3450,
         "taxes": 0.12
     },
     { 
@@ -48,6 +60,8 @@
         "revenue": 5485,
         "soldGoodsCosts": 2040,
         "operatingCosts": 2580,
+        "currentAssets": 1047,
+        "currentLiabilities": 3850,
         "taxes": 0.12
     },
     { 
@@ -55,6 +69,8 @@
         "revenue": 4809,
         "soldGoodsCosts": 1670,
         "operatingCosts": 2890,
+        "currentAssets": 1250,
+        "currentLiabilities": 4009,
         "taxes": 0.12 
     },
     { 
@@ -62,6 +78,8 @@
         "revenue": 3200,
         "soldGoodsCosts": 1600,
         "operatingCosts": 2000,
+        "currentAssets": 1148,
+        "currentLiabilities": 3600,
         "taxes": 0.12 
     },
     { 
@@ -69,6 +87,8 @@
         "revenue": 3450,
         "soldGoodsCosts": 1650,
         "operatingCosts": 1980,
+        "currentAssets": 1359,
+        "currentLiabilities": 4010,
         "taxes": 0.12 
     },
     { 
@@ -76,6 +96,8 @@
         "revenue": 4030,
         "soldGoodsCosts": 1687,
         "operatingCosts": 1891,
+        "currentAssets": 14520,
+        "currentLiabilities": 4150,
         "taxes": 0.12 
     },
     { 
@@ -83,6 +105,8 @@
         "revenue": 4190,
         "soldGoodsCosts": 1417,
         "operatingCosts": 1961,
+        "currentAssets": 15600,
+        "currentLiabilities": 4229,
         "taxes": 0.12 
     }
 ]

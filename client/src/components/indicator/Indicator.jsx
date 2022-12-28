@@ -12,8 +12,13 @@ const Indicator = props => {
             </div>
             <div className="indicator-body">
                 {props.chart === 'pie' ? 
-                    <NetProfitIndicator data={props.data} text={props.text}/> :
-                    <CurrentRatio data={props.data} text={props.text} />}
+                    <NetProfitIndicator 
+                        data={props.data} 
+                        text={props.text}/> :
+                    <CurrentRatio 
+                        data={props.data}
+                        index={props.index}
+                        text={props.index >= 3 ? 'Ótimo' : 'Ruim'} />}
                 
             </div>
         </div>

@@ -33,7 +33,7 @@ const App = () => {
     
 
 
-    // Obter saldo de cada mês
+    // Obter variaveis de cada mês
     const getChartsArrays = (backendData) => {
         let balancesArray = []
         let revenuesArray = []
@@ -74,7 +74,7 @@ const App = () => {
     }
 
 
-    // Calcular variáveis aqui
+    // Calcular variáveis do mes atual
     const calculateVariables = (property, customIndex='lastMonth') => {
         const monthIndex = customIndex !== 'lastMonth' ? customIndex : backendData.length - 1
         try {
@@ -97,6 +97,7 @@ const App = () => {
         } catch(e) {}
         
     }
+
 
     return (
         <React.Fragment>
@@ -175,9 +176,14 @@ const App = () => {
                     <Indicator 
                         title="Índice de Liquidez"
                         data={[
-                            { x: 1, y: 2}, 
-                            { x: 2, y: 3}
+                            { x: 1, y: 5 - backendData[1] ? backendData[backendData.length - 1].currentAssets /
+                            backendData[backendData.length - 1].currentLiabilities : ''}, 
+                            { x: 2, y: backendData[1] ? backendData[backendData.length - 1].currentAssets /
+                            backendData[backendData.length - 1].currentLiabilities : ''}
                         ]}
+                        index={backendData[1] ? backendData[backendData.length - 1].currentAssets /
+                            backendData[backendData.length - 1].currentLiabilities : ''}
+                        
                     />
                 </div>
             </div>
