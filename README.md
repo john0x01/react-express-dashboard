@@ -23,8 +23,8 @@
 ```
 or
 ```
-chmod +x start.sh
-./start.sh
+~$ chmod +x start.sh
+~$ ./start.sh
 ```
 
 ## Como funciona / How does it works?
