@@ -176,8 +176,9 @@ const App = () => {
                     <Indicator 
                         title="Índice de Liquidez"
                         data={[
-                            { x: 1, y: 5 - backendData[1] ? backendData[backendData.length - 1].currentAssets /
-                            backendData[backendData.length - 1].currentLiabilities : ''}, 
+                            { x: 1, y: 5 - ((backendData[1] ? backendData[backendData.length - 1].currentAssets /
+                            backendData[backendData.length - 1].currentLiabilities : '') < 5 ? (backendData[1] ? backendData[backendData.length - 1].currentAssets /
+                            backendData[backendData.length - 1].currentLiabilities : '') : 5)}, 
                             { x: 2, y: backendData[1] ? backendData[backendData.length - 1].currentAssets /
                             backendData[backendData.length - 1].currentLiabilities : ''}
                         ]}
